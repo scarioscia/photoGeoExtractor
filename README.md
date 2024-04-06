@@ -6,6 +6,10 @@ A Python package to extract GPS metadata from photos via Google Takeout. Uses co
 Until this package is on `PyPI`, users can install it manually: 
 
 1. Create a virtual environment
+---
+.. code-block:: sh
+python -m venv yourenvname
+---
 
 `python -m venv yourenvname`
 
