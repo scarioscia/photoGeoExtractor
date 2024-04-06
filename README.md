@@ -7,25 +7,25 @@ Until this package is on `PyPI`, users can install it manually:
 
 1. Create a virtual environment
 
-    `python -m venv yourenvname`
+        `python -m venv yourenvname`
 
-2. Activate your virtual environment 
+2. Activate your virtual environment (here called `yourenvname`)
 
-`source yourenvname/bin/activate` (Mac)
+        `source yourenvname/bin/activate` (Mac)
 
-`.\yourenvname\Scripts\activate` (Windows)
+        `.\yourenvname\Scripts\activate` (Windows)
 
 3. Navigate to where you'd like this repository to download, and then get it from GitHub
 
-`git clone https://github.com/scarioscia/photoGeoExtractor.git`
+        `git clone https://github.com/scarioscia/photoGeoExtractor.git`
 
 4. Navigate into the newly created directory 
 
-`cd ./photoGeoExtractor/`
+        `cd ./photoGeoExtractor/`
 
 5. Install the program 
 
-` pip install .`
+        ` pip install .`
 
 
 ## Usage
