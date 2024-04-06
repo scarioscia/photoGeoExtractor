@@ -7,7 +7,7 @@ Until this package is on `PyPI`, users can install it manually:
 
 1. Create a virtual environment
 
-        `python -m venv yourenvname`
+        python -m venv yourenvname
 
 2. Activate your virtual environment (here called `yourenvname`)
 
