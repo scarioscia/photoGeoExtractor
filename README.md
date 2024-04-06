@@ -6,19 +6,24 @@ A Python package to extract GPS metadata from photos via Google Takeout. Uses co
 Until this package is on `PyPI`, users can install it manually: 
 
 1. Create a virtual environment
+
 `python -m venv yourenvname`
 
 2. Activate your virtual environment 
+
 `source yourenvname/bin/activate` (Mac)
 `.\yourenvname\Scripts\activate` (Windows)
 
 3. Navigate to where you'd like this repository to download, and then get it from GitHub
+
 `git clone https://github.com/scarioscia/photoGeoExtractor.git`
 
 4. Navigate into the newly created directory 
+
 `cd ./photoGeoExtractor/`
 
 5. Install the program 
+
 ` pip install .`
 
 
@@ -34,5 +39,7 @@ Replace `/path/to/album` with your input and `outfile.csv` with your desired out
 - Add test photos for example 
 - Upload to PyPI 
 - Add frontmatter tutorial for getting photos to Google Takeout 
-- Set default for output filename.csv 
-- Improve README description 
+- Set default for output `filename.csv` 
+- Add option to export only GPS-specific metadata 
+- Improve `README` description 
+
