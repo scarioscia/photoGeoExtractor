@@ -1,0 +1,35 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "photoGeoExtractor"
+version = "0.0.1"
+dependencies = [
+  "click",
+  "pandas",
+  "exif",
+  "Pillow"
+]
+requires-python = ">=3.2"
+authors = [
+  { name="Sara Carioscia", email="saracarioscia@gmail.com" },
+]
+description = "Download GPS metadata from Google Photos"
+readme = "README.md"
+keywords = ["gps", "google takeout", "metadata"]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+
+[project.urls]
+Homepage = "https://github.com/scarioscia/photoGPSdata"
+Issues = "https://github.com/scarioscia/photoGPSdata/issues"
+
+[project.scripts]
+photoGeoExtractor-cli = "photoGeoExtractor:main_cli"
+
+[project.gui-scripts]
+photoGeoExtractor-gui = "photoGeoExtractor:main_gui"
