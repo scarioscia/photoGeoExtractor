@@ -38,4 +38,5 @@ Replace `/path/to/album` with your input (directory or `.zip` file) and `/path/t
 
 `python3 -m photoGeoExtractor extract-metadata --input=/path/to/album --output=/path/to/outfile.csv`
 
-
+### Flags 
+By default, the resulting `.csv` will contain filename, datetime, and GPS columns. Users can use the optional `--all` flag to output all available columns. Users can also specify which columns to output using the optional `--custom` flag followed by comma-separated column names (e.g., `--custom offset_time,offset_time_original,offset_time_digitized,shutter_speed_value`).
