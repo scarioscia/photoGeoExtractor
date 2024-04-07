@@ -12,7 +12,7 @@ def main():
 
 @main.command()
 @click.option('--input', help='Zip file or directory containing photos to scan', type=str)
-@click.option('--output', help='Output filename for gps metadata', type=str)
+@click.option('--output', help='Output filename for photo metadata', type=str)
 @click.option('-v', '--verbose', help='Log everything', is_flag=True)
 @click.option('--all', help='Include all columns in the output CSV file', is_flag=True)
 @click.option('--custom', help='List of column names separated by commas for custom CSV output', type=str)
