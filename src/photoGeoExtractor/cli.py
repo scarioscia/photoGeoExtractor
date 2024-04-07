@@ -17,7 +17,7 @@ def main():
 @click.option('--all', help='Include all columns in the output CSV file', is_flag=True)
 @click.option('--custom', help='List of column names separated by commas for custom CSV output', type=str)
 
-def extract_metadata(input, output, verbose, all):
+def extract_metadata(input, output, verbose, all, custom):
     """Get metadata from Google Takeout photos."""
     result = process_files(input)
 
