@@ -11,10 +11,13 @@ def main():
     """Run photoGeoExtractor."""
 
 @main.command()
-@click.option('--input', help='zip file containing photos to scan', type=str)
-@click.option('--output', help='Output filename for gps metadata', type=str)
+@click.option('--input', help='Zip file or directory containing photos to scan', type=str)
+@click.option('--output', help='Output filename for photo metadata', type=str)
 @click.option('-v', '--verbose', help='Log everything', is_flag=True)
-def extract_metadata(input, output, verbose):
+@click.option('--all', help='Include all columns in the output CSV file', is_flag=True)
+@click.option('--custom', help='List of column names separated by commas for custom CSV output', type=str)
+
+def extract_metadata(input, output, verbose, all, custom):
     """Get metadata from Google Takeout photos."""
     result = process_files(input)
 
@@ -33,6 +36,17 @@ def extract_metadata(input, output, verbose):
         # Extract flash data
         df["flash_fired"] = df.apply(lambda x: get_flash_data(x.flash), axis=1)
         df.gps_altitude = pd.to_numeric(df.gps_altitude)
+
+        # Select columns based on flags
+        if custom:
+            custom_columns = custom.split(',')
+            df = df[custom_columns]
+        elif all:
+            pass  # Do not filter columns
+        else:
+            default_columns = ['filename', 'datetime', 'gps_latitude_ref', 'gps_latitude', 'gps_longitude_ref', 'gps_longitude', 'gps_altitude_ref', 'gps_altitude', 'gps_longitude_dec', 'gps_latitude_dec']
+            df = df[default_columns]
+
 
         # Save DataFrame to CSV
         df.to_csv(output, index=False)

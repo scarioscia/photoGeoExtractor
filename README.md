@@ -1,6 +1,6 @@
 # photoGeoExtractor
 
-The `photoGeoExtractor` package extracts geolocation metadata from JPEG photos, exporting it to a csv file, building on [this](https://max-coding.medium.com/download-all-your-google-photos-and-extract-exif-metadata-into-a-csv-file-using-python-and-pandas-4a65de8392ab) code. 
+The `photoGeoExtractor` package extracts geolocation metadata from JPEG photos and exports it to a csv file, building on [this](https://max-coding.medium.com/download-all-your-google-photos-and-extract-exif-metadata-into-a-csv-file-using-python-and-pandas-4a65de8392ab) code. 
 
 To use, start by uploading your photos to Google Photos and then downloading them via Google Takeout. This is a quick process with a handy [tutorial](https://kb.uconn.edu/space/IKB/26398359570/Use+Google+Takeout+to+Export+Google+Photos). `photoGeoExtractor` takes as input either the resulting `.zip` file or an entire directory of images if unzipped. 
 
@@ -38,4 +38,5 @@ Replace `/path/to/album` with your input (directory or `.zip` file) and `/path/t
 
 `python3 -m photoGeoExtractor extract-metadata --input=/path/to/album --output=/path/to/outfile.csv`
 
-
+### Flags 
+By default, the resulting `.csv` will contain filename, datetime, and GPS columns. Users can use the optional `--all` flag to output all available columns. Users can also specify which columns to output using the optional `--custom` flag followed by comma-separated column names (e.g., `--custom offset_time,offset_time_original,offset_time_digitized,shutter_speed_value`).
