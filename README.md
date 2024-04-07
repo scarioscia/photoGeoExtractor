@@ -1,6 +1,9 @@
 # photoGeoExtractor
 
-A Python package to extract GPS metadata from photos via Google Takeout. Builds on code from [here](https://max-coding.medium.com/download-all-your-google-photos-and-extract-exif-metadata-into-a-csv-file-using-python-and-pandas-4a65de8392ab).
+The `photoGeoExtractor` package extracts geolocation metadata from JPEG photos, exporting it to a spreadsheet/csv file. This builds on code from [here](https://max-coding.medium.com/download-all-your-google-photos-and-extract-exif-metadata-into-a-csv-file-using-python-and-pandas-4a65de8392ab). 
+
+To use, start by uploading your photos to Google Photos and then downloading them via Google Takeout. This is a quick process with a handy [tutorial](https://kb.uconn.edu/space/IKB/26398359570/Use+Google+Takeout+to+Export+Google+Photos). `photoGeoExtractor` takes as input either the resulting `.zip` file or an entire directory of images if unzipped. 
+
 
 ## Installation 
 Until this package is on `PyPI`, users can install it manually: 
@@ -15,7 +18,7 @@ Until this package is on `PyPI`, users can install it manually:
 
         .\yourenvname\Scripts\activate # Windows
 
-3. Navigate to where you'd like this repository to download, and then get it from GitHub
+3. Navigate to where you'd like to download this repository, and then get it from GitHub
 
         git clone https://github.com/scarioscia/photoGeoExtractor.git
 
@@ -37,10 +40,6 @@ Replace `/path/to/album` with your input (directory or `.zip` file) and `outfile
 
 
 ## Improvements pending 
-- Add test photos for example 
-- Add frontmatter tutorial for getting photos to Google Takeout 
 - Set default output filename for `--outfile`
-- Create option to export only GPS-specific metadata 
-- Improve `README` description
-- Upload to `PyPI`  
+- Create option to export only GPS-specific metadata  
 
