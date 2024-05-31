@@ -32,7 +32,7 @@ Until this package is on `PyPI`, users can install it manually:
 
 
 ## Usage
-The `photoGeoExtractor` program uses the `extract-metadata` command to take GPS information from photos downloaded via Google Takeout and export it to a table. It takes as input either a directory or a compressed (`.zip`) file containing the photos. The user defines a filename for metadata output. 
+The `photoGeoExtractor` program uses the `extract-metadata` command to take GPS information and other metadata from photos downloaded via Google Takeout and export it to a table. It takes as input either a directory or a compressed (`.zip`) file containing the photos. The user defines a filename and location for metadata output. 
 
 Replace `/path/to/album` with your input (directory or `.zip` file) and `/path/to/outfile.csv` with your desired output filename and location: 
 
@@ -45,5 +45,7 @@ Users can use the optional `--all` flag to output all available columns.
 
 Users can also specify which columns to output using the optional `--custom` flag followed by comma-separated column names (e.g., `--custom offset_time,offset_time_original,offset_time_digitized,shutter_speed_value`).
 
+An example of commands using these flags is included in the `tutorial` directory.
+
 ## Contact
-If you have any suggestions or requests please post an issue or PR, or reach out to Sara (scarioscia). 
+If you have any suggestions or requests please post an issue or PR, or reach out to Sara Carioscia (scarioscia). 
